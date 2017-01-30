@@ -1,6 +1,6 @@
 UK Petitions: by signature count 
 =====================
-(Or, "Tw*tFinder: Geolocating Tw*ts by Petition Signature counts)
+(Or, "Tw^tFinder: Geolocating Tw^ts by Petition Signature counts)
 
 Description
 -----------
