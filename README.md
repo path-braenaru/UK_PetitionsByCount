@@ -26,8 +26,8 @@ OPTIONS:
 required, petty))
 
 ##Try it out:
-python signatories.py -l https://petition.parliament.uk/petitions/106477 -c 10
-
+python signatories.py -l https://petition.parliament.uk/petitions/106477 -c 10  
+![signatories.py example](./example.png)  
 Dependencies
 ------------
 

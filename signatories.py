@@ -85,8 +85,7 @@ def __init__():
     f = factory()
     JSONdata = f.grab_link(link)
     title_Count = f.meta(JSONdata)
-    print('%s%s%s' % (co.BO, title_Count, co.E))
-    print('(assumes you disagree with the petition)\n')
+    print('%s%s%s\n' % (co.BO, title_Count, co.E))
     crunch(JSONdata, cm, cl, outCount)
 
 
