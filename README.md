@@ -1,6 +1,6 @@
 UK Petitions: by signature count 
 =====================
-(previously known as Tw*tFinder)
+(Or, "Tw*tFinder: Geolocating Tw*ts by Petition Signature counts)
 
 Description
 -----------
@@ -25,8 +25,7 @@ OPTIONS:
    --agree (If you wish to switch colouration to highlight most signatures as GREEN (not 
 required, petty))
 
-##Try it out:
-python signatories.py -l https://petition.parliament.uk/petitions/106477 -c 10  
+##Example: Tw*ts Located!
 ![signatories.py example](./example.png)  
 Dependencies
 ------------
