@@ -47,30 +47,25 @@ def crunch(JSONdata, cm, cl, outCount):
     least = dict(sorted(all.items(), key=operator.itemgetter(1))[:outCount])
 
     print('%sMost Signatures%s' % (co.DC, co.E))
-    for x in most:
-        print('%s%s: %s%s' % (cm, x, str(most[x]), co.E))
+    for key,val in sorted(most.iteritems(),key=lambda (k,v):(v,k),reverse=True):
+        print('%s%s: %s%s' % (cm, key, str(val), co.E))
 
     print('%sLeast Signatures%s' % (co.DC, co.E))
-    for x in least:
-        print('%s%s: %s%s' % (cl, x, str(least[x]), co.E))
+    for key,val in sorted(least.iteritems(),key=lambda (k,v):(v,k),reverse=True):
+        print('%s%s: %s%s' % (cl, key, str(val), co.E))
 
 
 def __init__():
     a = argparse.ArgumentParser()
     a.add_argument(
-        '-l', '--link'
-    )
+        '-l', '--link')
     a.add_argument(
-        '-c', '--count'
-    )
+        '-c', '--count', default=5)
     a.add_argument(
-        '--agree', action='store_true'
-    )
+        '--agree', action='store_true', default=False)
     args = a.parse_args()
     link = args.link
     outCount = int(args.count)
-    if not outCount:
-        outCount = 5
     if not args.agree:
         cm = co.RE
         cl = co.GR
@@ -80,7 +75,7 @@ def __init__():
     if not link:
         print("\nNo link given! Try again...\n")
         exit(0)
-    if not link.startswith('ht'):
+    if not link.startswith('http'):
         link = 'https://' + link
     f = factory()
     JSONdata = f.grab_link(link)
